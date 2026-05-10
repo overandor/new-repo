@@ -1,19 +1,16 @@
-# Autonomous Terminal Agent
+# SMS Consent Documentation
 
-## Overview
-This repository contains a minimal but production-oriented 24/7 terminal agent.
+This repository provides public documentation for SMS opt-in consent, privacy, terms, and support instructions for business messaging verification.
 
-## Features
-- Background execution
-- Task scheduling
-- Logging
-- Restart-safe state
+## Public pages
 
-## Quick Start
-```bash
-pip install -r requirements.txt
-python agent.py
-```
+- `opt-in-consent.md` — how users subscribe and what they consent to receive.
+- `privacy-policy.md` — privacy policy for SMS and contact data.
+- `terms-and-conditions.md` — messaging terms and conditions.
+- `support.md` — HELP and STOP instructions.
 
-## Goal
-Foundation for a continuously running local automation system.
+## Standard opt-in language
+
+Users opt in by texting `START`, `YES`, or `SUBSCRIBE` to the business phone number after reviewing the public consent language.
+
+Message frequency varies. Message and data rates may apply. Reply `HELP` for help. Reply `STOP` to opt out.
