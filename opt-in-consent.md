@@ -2,7 +2,9 @@
 
 ## Business Messaging Consent
 
-Users may opt in to receive SMS messages from this business by texting one of the approved opt-in keywords to the business phone number.
+Users may opt in to receive SMS messages from this business by texting one of the approved opt-in keywords to this business phone number:
+
++1 866 514 7589
 
 Approved opt-in keywords:
 
@@ -24,12 +26,12 @@ Message and data rates may apply.
 
 ## Opt Out
 
-Users can opt out at any time by replying STOP.
+Users can opt out at any time by replying STOP to +1 866 514 7589.
 
 ## Help
 
-Users can request help at any time by replying HELP.
+Users can request help at any time by replying HELP to +1 866 514 7589.
 
 ## Consent Statement
 
-By texting START, YES, or SUBSCRIBE to the business phone number, the user agrees to receive SMS notifications from this business. Consent is not a condition of purchase.
+By texting START, YES, or SUBSCRIBE to +1 866 514 7589, the user agrees to receive SMS notifications from this business. Consent is not a condition of purchase.
