@@ -5,6 +5,7 @@ support.md
 opt-in-consent.md
 terms-and-conditions.md
 README.md
+.github/workflows/snap2txt-on-commit.yml
 .github/workflows/snap2txt.yml
 .git/index
 .git/HEAD
@@ -13,7 +14,9 @@ README.md
 .git/FETCH_HEAD
 .git/config.worktree
 .git/objects/e0/b00febd39bcc6db0f35c9d4b89a711b643167a
+.git/objects/e0/a6968a7ff630f77e2eebbada3bd62a36a42008
 .git/objects/0b/350ed768bbe7cb57c27fafa098571bc91fd4d8
+.git/objects/cf/f95c5d5c015fceaafc4a652ddecf6e833a0ad9
 .git/objects/f8/78338979e33f9c8c49e6a633a6f5ddf93b4a6d
 .git/objects/60/422c4b25ba72ff9db7df968f23fadd7ccf1653
 .git/objects/c7/b990033249c83c73510a80f2fd85097b8d68f3
@@ -28,14 +31,19 @@ README.md
 .git/objects/48/a2b48328f45cd306a4422d8d999fd3fee7bff8
 .git/objects/c6/0a9aa60a891444d044f9f382fa8eb695de0afa
 .git/objects/85/b3e47f6ea5d3df91318c3fca9c735cde06695c
+.git/objects/de/72d4efd9696e2e31bfc3b37bffc081a7efecb6
 .git/objects/27/4ee644c2e067816361b7ae48d1bdc986976220
 .git/objects/a1/e6b8c0949b7eedd61319a12bbd41baeedc17dd
 .git/objects/a1/97d1e38ee351880d981e2afa7b308b58efd561
+.git/objects/ed/8b4d5bb93b0e33c4c76a5aae5c8629f3ad80a6
 .git/objects/ce/5e6fb3cfa739b34fa55edb5cfbd192780b135e
+.git/objects/df/edca630c174aae237055fa34f694566bb9cbbc
+.git/objects/88/ccada076ba026fcc4033662813e64639cffcd7
 .git/objects/26/49ab5ed24097db38f07ef6addd26ca0160d95a
 .git/objects/a9/f4fe7a107470346f6c7de0839d2b350faf4f66
 .git/objects/82/493093d18701b20debf35cd33c06633d35d538
 .git/objects/52/29886410b5828b52b08b7aca49520733631a8e
+.git/objects/e8/631c8a278a3dc5a9708002c5313d1641e0dc53
 .git/objects/e8/4531d8ccf73cb5fcfe29bfb63fb2ca00f52ed4
 .git/objects/7a/ed4ff39031343137c5c7e3e03f15e283b85564
 .git/objects/99/e8051e91342097759dd0d98880cc902996ae86
@@ -49,6 +57,7 @@ README.md
 .git/objects/c8/2b8785ceea4d1a390678c30785340dfc55685b
 .git/objects/c3/218845f9c26c1d2931a238a1b3583d36ad28bf
 .git/objects/a6/c14f59b181cc62b6beebef4d305828102fd3e2
+.git/objects/16/9f0d989d0ca00bdc43ec5d28b77f60268c216a
 .git/objects/ba/c03d9c24a4ca621c9c4deaa79671c5287b13c8
 .git/objects/3c/97891831f321b462c560b233e9629edc5f23e3
 .git/objects/53/7208f319069ef45d1c355923d70a0a99f5b2bb
@@ -73,6 +82,7 @@ README.md
 .git/logs/refs/heads/main
 .git/logs/refs/remotes/origin/snap2txt
 .git/logs/refs/remotes/origin/main
+.git/refs/tags/snap2txt-latest
 .git/refs/heads/main
 .git/refs/remotes/origin/snap2txt
 .git/refs/remotes/origin/main
@@ -254,6 +264,23 @@ Message frequency varies. Message and data rates may apply. Reply `HELP` for hel
 
 ```
 
+snap2txt-on-commit.yml:
+```
+name: Snap2Txt on every commit
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snap2txt:
+    uses: overandor/snap2txt/.github/workflows/reusable-snap2txt-v2.yml@0e0457da0cbdeff7a7c2c68558fca124967f229e
+
+```
+
 snap2txt.yml:
 ```
 name: Snap2Text after every push
@@ -275,7 +302,7 @@ jobs:
 
 index:
 ```
-Error reading file: 'utf-8' codec can't decode byte 0xaa in position 14: invalid start byte
+Error reading file: 'utf-8' codec can't decode byte 0xae in position 14: invalid start byte
 ```
 
 HEAD:
@@ -310,8 +337,9 @@ config:
 
 FETCH_HEAD:
 ```
-f2fc76802c3213c55c9529f0d3fe4aa762d76197		branch 'main' of https://github.com/overandor/new-repo
-f878338979e33f9c8c49e6a633a6f5ddf93b4a6d		branch 'snap2txt' of https://github.com/overandor/new-repo
+88ccada076ba026fcc4033662813e64639cffcd7		branch 'main' of https://github.com/overandor/new-repo
+dfedca630c174aae237055fa34f694566bb9cbbc		branch 'snap2txt' of https://github.com/overandor/new-repo
+f2fc76802c3213c55c9529f0d3fe4aa762d76197		tag 'snap2txt-latest' of https://github.com/overandor/new-repo
 
 ```
 
@@ -330,9 +358,19 @@ b00febd39bcc6db0f35c9d4b89a711b643167a:
 Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
 ```
 
+a6968a7ff630f77e2eebbada3bd62a36a42008:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb1 in position 8: invalid start byte
+```
+
 350ed768bbe7cb57c27fafa098571bc91fd4d8:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte
+```
+
+f95c5d5c015fceaafc4a652ddecf6e833a0ad9:
+```
+Error reading file: 'utf-8' codec can't decode byte 0x85 in position 14: invalid start byte
 ```
 
 78338979e33f9c8c49e6a633a6f5ddf93b4a6d:
@@ -405,6 +443,11 @@ b3e47f6ea5d3df91318c3fca9c735cde06695c:
 Error reading file: 'utf-8' codec can't decode byte 0x85 in position 2: invalid start byte
 ```
 
+72d4efd9696e2e31bfc3b37bffc081a7efecb6:
+```
+Error reading file: 'utf-8' codec can't decode byte 0x8d in position 3: invalid start byte
+```
+
 4ee644c2e067816361b7ae48d1bdc986976220:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xdc in position 6: invalid continuation byte
@@ -420,9 +463,24 @@ Error reading file: 'utf-8' codec can't decode byte 0xf1 in position 22: invalid
 Error reading file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte
 ```
 
+8b4d5bb93b0e33c4c76a5aae5c8629f3ad80a6:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xdd in position 2: invalid continuation byte
+```
+
 5e6fb3cfa739b34fa55edb5cfbd192780b135e:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte
+```
+
+edca630c174aae237055fa34f694566bb9cbbc:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte
+```
+
+ccada076ba026fcc4033662813e64639cffcd7:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid start byte
 ```
 
 49ab5ed24097db38f07ef6addd26ca0160d95a:
@@ -443,6 +501,11 @@ Error reading file: 'utf-8' codec can't decode byte 0xf1 in position 22: invalid
 29886410b5828b52b08b7aca49520733631a8e:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xf1 in position 21: invalid continuation byte
+```
+
+631c8a278a3dc5a9708002c5313d1641e0dc53:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte
 ```
 
 4531d8ccf73cb5fcfe29bfb63fb2ca00f52ed4:
@@ -508,6 +571,11 @@ Error reading file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid 
 c14f59b181cc62b6beebef4d305828102fd3e2:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xf1 in position 22: invalid continuation byte
+```
+
+9f0d989d0ca00bdc43ec5d28b77f60268c216a:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte
 ```
 
 c03d9c24a4ca621c9c4deaa79671c5287b13c8:
@@ -1524,43 +1592,49 @@ DOC_END
 
 HEAD:
 ```
-0000000000000000000000000000000000000000 f2fc76802c3213c55c9529f0d3fe4aa762d76197 runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	checkout: moving from master to main
+0000000000000000000000000000000000000000 88ccada076ba026fcc4033662813e64639cffcd7 runner <runner@runnervmvrwv9.(none)> 1784917599 +0000	checkout: moving from master to main
 
 ```
 
 main:
 ```
-0000000000000000000000000000000000000000 f2fc76802c3213c55c9529f0d3fe4aa762d76197 runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	branch: Created from refs/remotes/origin/main
+0000000000000000000000000000000000000000 88ccada076ba026fcc4033662813e64639cffcd7 runner <runner@runnervmvrwv9.(none)> 1784917599 +0000	branch: Created from refs/remotes/origin/main
 
 ```
 
 snap2txt:
 ```
-0000000000000000000000000000000000000000 f878338979e33f9c8c49e6a633a6f5ddf93b4a6d runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
+0000000000000000000000000000000000000000 dfedca630c174aae237055fa34f694566bb9cbbc runner <runner@runnervmvrwv9.(none)> 1784917599 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
 
 ```
 
 main:
 ```
-0000000000000000000000000000000000000000 f2fc76802c3213c55c9529f0d3fe4aa762d76197 runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
+0000000000000000000000000000000000000000 88ccada076ba026fcc4033662813e64639cffcd7 runner <runner@runnervmvrwv9.(none)> 1784917599 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
 
 ```
 
-main:
+snap2txt-latest:
 ```
 f2fc76802c3213c55c9529f0d3fe4aa762d76197
+
+```
+
+main:
+```
+88ccada076ba026fcc4033662813e64639cffcd7
 
 ```
 
 snap2txt:
 ```
-f878338979e33f9c8c49e6a633a6f5ddf93b4a6d
+dfedca630c174aae237055fa34f694566bb9cbbc
 
 ```
 
 main:
 ```
-f2fc76802c3213c55c9529f0d3fe4aa762d76197
+88ccada076ba026fcc4033662813e64639cffcd7
 
 ```
 
