@@ -1,0 +1,14 @@
+name: Snap2Text after every push
+
+on:
+  push:
+    branches-ignore:
+      - snap2txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    uses: overandor/hf-spaces-snap2txt/.github/workflows/repository-snap2txt.yml@2985dd1f0644170d303c8d318a0f34d0b8a3521b
