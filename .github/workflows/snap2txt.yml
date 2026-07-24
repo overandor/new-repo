@@ -11,4 +11,4 @@ permissions:
 
 jobs:
   snapshot:
-    uses: overandor/hf-spaces-snap2txt/.github/workflows/repository-snap2txt.yml@2985dd1f0644170d303c8d318a0f34d0b8a3521b
+    uses: overandor/hf-spaces-snap2txt/.github/workflows/repository-snap2txt.yml@1d9b7a71b7245f98c85cd9c8619ddf124d0d8db2
