@@ -14,13 +14,18 @@ README.md
 .git/config.worktree
 .git/objects/e0/b00febd39bcc6db0f35c9d4b89a711b643167a
 .git/objects/0b/350ed768bbe7cb57c27fafa098571bc91fd4d8
+.git/objects/f8/78338979e33f9c8c49e6a633a6f5ddf93b4a6d
 .git/objects/60/422c4b25ba72ff9db7df968f23fadd7ccf1653
 .git/objects/c7/b990033249c83c73510a80f2fd85097b8d68f3
 .git/objects/a2/c5d2e46964738f54ac5f093137b62df50561a7
+.git/objects/d2/c8344d294e24dc3d7cb75e0fbb9989c7920fbd
 .git/objects/d2/d47272aaecf3effe95fdc2841e58f2d2e7f9d6
 .git/objects/6b/a22b15ab7f4706b384190c0c7d7a8398fb934e
 .git/objects/28/a8e9bd1050ec90bc18bed69f0727b54fce2ca1
+.git/objects/f2/fc76802c3213c55c9529f0d3fe4aa762d76197
+.git/objects/67/bd61eed3b0f5347bdc27314a8bc9929ba7f0d0
 .git/objects/00/8c33c42d82fabbae5a1ccb808f5dc04b7b7e33
+.git/objects/48/a2b48328f45cd306a4422d8d999fd3fee7bff8
 .git/objects/c6/0a9aa60a891444d044f9f382fa8eb695de0afa
 .git/objects/85/b3e47f6ea5d3df91318c3fca9c735cde06695c
 .git/objects/27/4ee644c2e067816361b7ae48d1bdc986976220
@@ -28,6 +33,7 @@ README.md
 .git/objects/a1/97d1e38ee351880d981e2afa7b308b58efd561
 .git/objects/ce/5e6fb3cfa739b34fa55edb5cfbd192780b135e
 .git/objects/26/49ab5ed24097db38f07ef6addd26ca0160d95a
+.git/objects/a9/f4fe7a107470346f6c7de0839d2b350faf4f66
 .git/objects/82/493093d18701b20debf35cd33c06633d35d538
 .git/objects/52/29886410b5828b52b08b7aca49520733631a8e
 .git/objects/e8/4531d8ccf73cb5fcfe29bfb63fb2ca00f52ed4
@@ -41,11 +47,13 @@ README.md
 .git/objects/1c/9f04f0eeb176638cceeb7166c847b2cfd9bf5e
 .git/objects/c8/8bd24ebede6725808cf11cce3b52253961171e
 .git/objects/c8/2b8785ceea4d1a390678c30785340dfc55685b
+.git/objects/c3/218845f9c26c1d2931a238a1b3583d36ad28bf
 .git/objects/a6/c14f59b181cc62b6beebef4d305828102fd3e2
 .git/objects/ba/c03d9c24a4ca621c9c4deaa79671c5287b13c8
 .git/objects/3c/97891831f321b462c560b233e9629edc5f23e3
 .git/objects/53/7208f319069ef45d1c355923d70a0a99f5b2bb
 .git/objects/e7/9d25d420e6db84663d2ef650e9e5069a18c10f
+.git/objects/e7/1ab55293e1aff603e48f4c03ed4a98528c00a0
 .git/objects/6c/bf987da0fc33e610623cba5fc36632a180ef9a
 .git/hooks/sendemail-validate.sample
 .git/hooks/push-to-checkout.sample
@@ -261,13 +269,13 @@ permissions:
 
 jobs:
   snapshot:
-    uses: overandor/hf-spaces-snap2txt/.github/workflows/repository-snap2txt.yml@2985dd1f0644170d303c8d318a0f34d0b8a3521b
+    uses: overandor/hf-spaces-snap2txt/.github/workflows/repository-snap2txt.yml@1d9b7a71b7245f98c85cd9c8619ddf124d0d8db2
 
 ```
 
 index:
 ```
-Error reading file: 'utf-8' codec can't decode byte 0xa8 in position 14: invalid start byte
+Error reading file: 'utf-8' codec can't decode byte 0xaa in position 14: invalid start byte
 ```
 
 HEAD:
@@ -302,8 +310,8 @@ config:
 
 FETCH_HEAD:
 ```
-c7b990033249c83c73510a80f2fd85097b8d68f3		branch 'main' of https://github.com/overandor/new-repo
-d0e07d65f03131b63bc2a778e1216df7908c3e7b		branch 'snap2txt' of https://github.com/overandor/new-repo
+f2fc76802c3213c55c9529f0d3fe4aa762d76197		branch 'main' of https://github.com/overandor/new-repo
+f878338979e33f9c8c49e6a633a6f5ddf93b4a6d		branch 'snap2txt' of https://github.com/overandor/new-repo
 
 ```
 
@@ -327,6 +335,11 @@ Error reading file: 'utf-8' codec can't decode byte 0xca in position 3: invalid 
 Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte
 ```
 
+78338979e33f9c8c49e6a633a6f5ddf93b4a6d:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb5 in position 2: invalid start byte
+```
+
 422c4b25ba72ff9db7df968f23fadd7ccf1653:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xb0 in position 7: invalid start byte
@@ -340,6 +353,11 @@ Error reading file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid 
 c5d2e46964738f54ac5f093137b62df50561a7:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xf1 in position 22: invalid continuation byte
+```
+
+c8344d294e24dc3d7cb75e0fbb9989c7920fbd:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte
 ```
 
 d47272aaecf3effe95fdc2841e58f2d2e7f9d6:
@@ -357,7 +375,22 @@ a8e9bd1050ec90bc18bed69f0727b54fce2ca1:
 Error reading file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid start byte
 ```
 
+fc76802c3213c55c9529f0d3fe4aa762d76197:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xa5 in position 2: invalid start byte
+```
+
+bd61eed3b0f5347bdc27314a8bc9929ba7f0d0:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb1 in position 8: invalid start byte
+```
+
 8c33c42d82fabbae5a1ccb808f5dc04b7b7e33:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xce in position 18: invalid continuation byte
+```
+
+a2b48328f45cd306a4422d8d999fd3fee7bff8:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xce in position 18: invalid continuation byte
 ```
@@ -395,6 +428,11 @@ Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid 
 49ab5ed24097db38f07ef6addd26ca0160d95a:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0x92 in position 3: invalid start byte
+```
+
+f4fe7a107470346f6c7de0839d2b350faf4f66:
+```
+Error reading file: 'utf-8' codec can't decode byte 0xb2 in position 8: invalid start byte
 ```
 
 493093d18701b20debf35cd33c06633d35d538:
@@ -462,6 +500,11 @@ Error reading file: 'utf-8' codec can't decode byte 0xc9 in position 4: invalid 
 Error reading file: 'utf-8' codec can't decode byte 0x9d in position 2: invalid start byte
 ```
 
+218845f9c26c1d2931a238a1b3583d36ad28bf:
+```
+Error reading file: 'utf-8' codec can't decode byte 0x8e in position 3: invalid start byte
+```
+
 c14f59b181cc62b6beebef4d305828102fd3e2:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xf1 in position 22: invalid continuation byte
@@ -485,6 +528,11 @@ Error reading file: 'utf-8' codec can't decode byte 0x90 in position 3: invalid 
 9d25d420e6db84663d2ef650e9e5069a18c10f:
 ```
 Error reading file: 'utf-8' codec can't decode byte 0xbd in position 16: invalid start byte
+```
+
+1ab55293e1aff603e48f4c03ed4a98528c00a0:
+```
+Error reading file: 'utf-8' codec can't decode byte 0x85 in position 14: invalid start byte
 ```
 
 bf987da0fc33e610623cba5fc36632a180ef9a:
@@ -1476,43 +1524,43 @@ DOC_END
 
 HEAD:
 ```
-0000000000000000000000000000000000000000 c7b990033249c83c73510a80f2fd85097b8d68f3 runner <runner@runnervmvrwv9.(none)> 1784916177 +0000	checkout: moving from master to main
+0000000000000000000000000000000000000000 f2fc76802c3213c55c9529f0d3fe4aa762d76197 runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	checkout: moving from master to main
 
 ```
 
 main:
 ```
-0000000000000000000000000000000000000000 c7b990033249c83c73510a80f2fd85097b8d68f3 runner <runner@runnervmvrwv9.(none)> 1784916177 +0000	branch: Created from refs/remotes/origin/main
+0000000000000000000000000000000000000000 f2fc76802c3213c55c9529f0d3fe4aa762d76197 runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	branch: Created from refs/remotes/origin/main
 
 ```
 
 snap2txt:
 ```
-0000000000000000000000000000000000000000 d0e07d65f03131b63bc2a778e1216df7908c3e7b runner <runner@runnervmvrwv9.(none)> 1784916177 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
+0000000000000000000000000000000000000000 f878338979e33f9c8c49e6a633a6f5ddf93b4a6d runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
 
 ```
 
 main:
 ```
-0000000000000000000000000000000000000000 c7b990033249c83c73510a80f2fd85097b8d68f3 runner <runner@runnervmvrwv9.(none)> 1784916177 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
+0000000000000000000000000000000000000000 f2fc76802c3213c55c9529f0d3fe4aa762d76197 runner <runner@runnervmvrwv9.b3yniapqfpledkdknmdvdxy3fe.bx.internal.cloudapp.net> 1784916499 +0000	fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*: storing head
 
 ```
 
 main:
 ```
-c7b990033249c83c73510a80f2fd85097b8d68f3
+f2fc76802c3213c55c9529f0d3fe4aa762d76197
 
 ```
 
 snap2txt:
 ```
-d0e07d65f03131b63bc2a778e1216df7908c3e7b
+f878338979e33f9c8c49e6a633a6f5ddf93b4a6d
 
 ```
 
 main:
 ```
-c7b990033249c83c73510a80f2fd85097b8d68f3
+f2fc76802c3213c55c9529f0d3fe4aa762d76197
 
 ```
 
